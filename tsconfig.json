@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    "lib": ["ES2017", "DOM"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src"],
+  "exclude": ["*/ignore/*", "node_modules"]
+}
