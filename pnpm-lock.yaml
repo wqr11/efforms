@@ -7,28 +7,27 @@ settings:
 importers:
 
   .:
-    dependencies:
-      effector:
-        specifier: ^22.0.0
-        version: 22.8.8
     devDependencies:
+      effector:
+        specifier: ^23.0.0
+        version: 23.4.4
       typescript:
-        specifier: ^3.7.0
-        version: 3.9.10
+        specifier: ^4.0.0 || ^5.0.0 || ^6.0.0
+        version: 5.9.3
 
 packages:
 
-  effector@22.8.8:
-    resolution: {integrity: sha512-uqYEPt/jIZ3Y1WhpyED1XuXAJNsVM5TcWZvcyQhl6nYKRynklGiu+Fy/BnLQftmMcxZS478laAuExUPfuOGiOg==}
+  effector@23.4.4:
+    resolution: {integrity: sha512-QkZboRN28K/iwxigDhlJcI3ux3aNbt8kYGGH/GkqWG0OlGeyuBhb7PdM89Iu+ogV8Lmz16xIlwnXR2UNWI6psg==}
     engines: {node: '>=11.0.0'}
 
-  typescript@3.9.10:
-    resolution: {integrity: sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==}
-    engines: {node: '>=4.2.0'}
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
     hasBin: true
 
 snapshots:
 
-  effector@22.8.8: {}
+  effector@23.4.4: {}
 
-  typescript@3.9.10: {}
+  typescript@5.9.3: {}

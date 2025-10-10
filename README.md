@@ -112,8 +112,8 @@ const form = new Form(
 
 ## 🤝 Совместимость
 
-- Effector v20+ (2019+)
-- TypeScript 3.7.0+ (2019+)
+- `"effector": "^22.0.0 || ^23.0.0"`
+- `"typescript": "^4.0.0 || ^5.0.0 || ^6.0.0"`
 - Любые UI фреймворки (React, Vue, Solid, Svelte и т.д.)
 
 ## 📝 Лицензия

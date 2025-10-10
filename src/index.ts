@@ -2,6 +2,7 @@ import {
   createEffect,
   createEvent,
   createStore,
+  type Effect,
   type EventCallable,
   type Store,
 } from 'effector';
@@ -15,16 +16,17 @@ export type FormRulesType<T> = {
 
 export class Form<T extends { [K in keyof T]: FormFieldValueType }> {
   initValue: T;
-  setFields = createEvent<Partial<T>>();
+  setFields: EventCallable<Partial<T>> = createEvent<Partial<T>>();
   $fields: Store<T>;
   $handlers: Record<keyof T, (value: FormFieldValueType) => void>;
-  setErrors = createEvent<Record<keyof T, string[]>>();
+  setErrors: EventCallable<Record<keyof T, string[]>> =
+    createEvent<Record<keyof T, string[]>>();
   $errors: Store<Record<keyof T, string[]>>;
   rules?: FormRulesType<T> | null;
   validCallback?: EventCallable<void> | null;
   nonValidCallback?: EventCallable<void> | null;
 
-  validate = createEffect(() => {
+  validate: Effect<void, void, Error> = createEffect(() => {
     if (!this.rules) {
       this.validCallback?.();
       return;
@@ -61,8 +63,8 @@ export class Form<T extends { [K in keyof T]: FormFieldValueType }> {
       this.nonValidCallback?.();
     }
   });
-  reset = createEvent<void>();
-  clearErrors = createEvent<void>();
+  reset: EventCallable<void> = createEvent<void>();
+  clearErrors: EventCallable<void> = createEvent<void>();
 
   constructor(
     init: T,
