@@ -4,7 +4,7 @@ import {
   createStore,
   type EventCallable,
   type Store,
-} from "effector";
+} from 'effector';
 
 export type FormFieldValueType = string | number | boolean | null;
 export type FormRulesType<T> = {
@@ -99,5 +99,3 @@ export class Form<T extends { [K in keyof T]: FormFieldValueType }> {
     >;
   }
 }
-
-// export * from "./hooks";

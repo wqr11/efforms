@@ -1,22 +1,48 @@
 {
   "name": "efforms",
-  "version": "0.1.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Lightweight form management library built on top of Effector",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": [],
-  "author": "WQR!",
+  "keywords": [
+    "effector",
+    "forms",
+    "form",
+    "validation",
+    "react-forms",
+    "state-management",
+    "typescript",
+    "reactive",
+    "form-validation",
+    "form-management",
+    "effector-forms",
+    "reactive-forms"
+  ],
+  "author": "Дмитрий <wqr1> Кондратьев mailto:dimakond520@gmail.com",
   "license": "MIT",
-  "devDependencies": {
-    "typescript": "^3.7.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wqr11/efforms.git"
   },
-  "dependencies": {
-    "effector": "^22.0.0"
+  "bugs": {
+    "url": "https://github.com/wqr11/efforms/issues"
   },
+  "homepage": "https://github.com/wqr11/efforms#readme",
   "files": [
-    "dist"
-  ]
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "effector": ">=22.0.0"
+  },
+  "devDependencies": {
+    "effector": ">=22.0.0",
+    "typescript": ">=3.7.0"
+  }
 }
